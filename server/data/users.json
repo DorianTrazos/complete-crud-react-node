@@ -1,1 +1,409 @@
-[{"userId":"e65e1490-c230-4043-80bc-ea32fee5f57c","name":"Enrique Sofresco","email":"enriquesofresco@gmail.com"},{"userId":"356236ef-a50c-4bc7-9fa6-66450119634f","name":"Diego Minolas ","email":"diegominolas@yahoo.com"},{"userId":"5b744899-0deb-4e8b-ac45-f420fccb3a39","name":"Leandro Gado","email":"leandrogado@gmail.com"},{"userId":"ceac053f-e991-4e3a-9367-5276bc1ba6e6","name":"Helen Chufe","email":"helenchufe@hotmail.com"},{"userId":"df6b1632-881a-4086-a66b-82777469f8f4","name":"Serafin Demés","email":"serafindemes@gmail.com"},{"userId":"84df87a5-7398-4649-a154-946119c94ac1","name":"Elba Surero","email":"elbasurero@yahoo.com"},{"userId":"a2f0d7b5-907d-4f87-b990-9fd243bdc635","name":"Jacky Sieras","email":"jackysieras@hotmail.com"},{"userId":"bba23781-75e4-4432-b154-f0067a1d9b89","name":"Lola Mento","email":"lolamento@hotmail.com"},{"userId":"f4b57dd7-d8a5-477e-a0fd-e03ca0f49834","name":"Esther Colero","email":"esthercolero@gmail.com"},{"userId":"5580dcdb-d727-487d-aa41-76d631d8f492","name":"Aiko Mida","email":"aikomida@yahoo.com"},{"userId":"5580dcdb-d727-487d-aa41-76d631d8f493","name":"Yoko Mosushi","email":"yokomosushi@yahoo.com"},{"userId":"3ba7fd84-f482-4288-84d8-cf3f00c5b27e","name":"Pepe","email":"pepe@gmail.com"},{"userId":"51c7aeb4-ff0c-448b-98d1-d2491bf49279","name":"Pepe","email":"pepe@gmail.com"}]
+[
+  {
+    "userId": "e65e1490-c230-4043-80bc-ea32fee5f57c",
+    "active": true,
+    "basicInformation": {
+      "fullName": "Enrique Sofresco",
+      "username": "enriquesofresco",
+      "profilePicture": "https://xsgames.co/randomusers/assets/avatars/male/70.jpg",
+      "emailAddress": "enriquesofresco@gmail.com",
+      "phoneNumber": "+1 555-123-4567",
+      "dateOfBirth": "1985-06-15",
+      "gender": "Male"
+    },
+    "contactInformation": {
+      "address": {
+        "street": "456 Main Street",
+        "city": "Springfield",
+        "state": "Illinois",
+        "zipCode": "62704",
+        "country": "USA",
+        "fullAddress": "456 Main Street, Springfield, Illinois, 62704, USA"
+      },
+      "socialMediaLinks": {
+        "linkedIn": "https://linkedin.com/in/enriquesofresco",
+        "twitter": "https://twitter.com/enriquesofresco",
+        "instagram": "https://instagram.com/enriquesofresco"
+      },
+      "alternatePhoneNumber": "+1 555-987-6543",
+      "alternateEmailAddress": "enriquesofresco.alt@example.com"
+    },
+    "professionalInformation": {
+      "jobTitle": "Software Engineer",
+      "company": "Tech Innovations Inc.",
+      "department": "Development",
+      "workLocation": "Remote",
+      "dateOfJoining": "2015-08-01"
+    }
+  },
+  {
+    "userId": "356236ef-a50c-4bc7-9fa6-66450119634f",
+    "active": false,
+    "basicInformation": {
+      "fullName": "Diego Minolas",
+      "username": "diegominolas",
+      "profilePicture": "https://xsgames.co/randomusers/assets/avatars/male/32.jpg",
+      "emailAddress": "diegominolas@yahoo.com",
+      "phoneNumber": "+1 555-123-4567",
+      "dateOfBirth": "1985-06-15",
+      "gender": "Male"
+    },
+    "contactInformation": {
+      "address": {
+        "street": "456 Main Street",
+        "city": "Springfield",
+        "state": "Illinois",
+        "zipCode": "62704",
+        "country": "USA",
+        "fullAddress": "456 Main Street, Springfield, Illinois, 62704, USA"
+      },
+      "socialMediaLinks": {
+        "linkedIn": "https://linkedin.com/in/diegominolas",
+        "twitter": "https://twitter.com/diegominolas",
+        "instagram": "https://instagram.com/diegominolas"
+      },
+      "alternatePhoneNumber": "+1 555-987-6543",
+      "alternateEmailAddress": "diegominolas.alt@yahoo.com"
+    },
+    "professionalInformation": {
+      "jobTitle": "Software Engineer",
+      "company": "Tech Innovations Inc.",
+      "department": "Development",
+      "workLocation": "Remote",
+      "dateOfJoining": "2015-08-01"
+    }
+  },
+  {
+    "userId": "5b744899-0deb-4e8b-ac45-f420fccb3a39",
+    "active": true,
+    "basicInformation": {
+      "fullName": "Leandro Gado",
+      "username": "leandrogado",
+      "profilePicture": "https://xsgames.co/randomusers/assets/avatars/male/57.jpg",
+      "emailAddress": "leandrogado@gmail.com",
+      "phoneNumber": "+1 555-123-4567",
+      "dateOfBirth": "1985-06-15",
+      "gender": "Male"
+    },
+    "contactInformation": {
+      "address": {
+        "street": "456 Main Street",
+        "city": "Springfield",
+        "state": "Illinois",
+        "zipCode": "62704",
+        "country": "USA",
+        "fullAddress": "456 Main Street, Springfield, Illinois, 62704, USA"
+      },
+      "socialMediaLinks": {
+        "linkedIn": "https://linkedin.com/in/leandrogado",
+        "twitter": "https://twitter.com/leandrogado",
+        "instagram": "https://instagram.com/leandrogado"
+      },
+      "alternatePhoneNumber": "+1 555-987-6543",
+      "alternateEmailAddress": "leandrogado.alt@example.com"
+    },
+    "professionalInformation": {
+      "jobTitle": "Software Engineer",
+      "company": "Tech Innovations Inc.",
+      "department": "Development",
+      "workLocation": "Remote",
+      "dateOfJoining": "2015-08-01"
+    }
+  },
+  {
+    "userId": "ceac053f-e991-4e3a-9367-5276bc1ba6e6",
+    "active": true,
+    "basicInformation": {
+      "fullName": "Helen Chufe",
+      "username": "helenchufe",
+      "profilePicture": "https://xsgames.co/randomusers/assets/avatars/female/70.jpg",
+      "emailAddress": "helenchufe@hotmail.com",
+      "phoneNumber": "+1 555-123-4567",
+      "dateOfBirth": "1985-06-15",
+      "gender": "Female"
+    },
+    "contactInformation": {
+      "address": {
+        "street": "456 Main Street",
+        "city": "Springfield",
+        "state": "Illinois",
+        "zipCode": "62704",
+        "country": "USA",
+        "fullAddress": "456 Main Street, Springfield, Illinois, 62704, USA"
+      },
+      "socialMediaLinks": {
+        "linkedIn": "https://linkedin.com/in/helenchufe",
+        "twitter": "https://twitter.com/helenchufe",
+        "instagram": "https://instagram.com/helenchufe"
+      },
+      "alternatePhoneNumber": "+1 555-987-6543",
+      "alternateEmailAddress": "helenchufe.alt@example.com"
+    },
+    "professionalInformation": {
+      "jobTitle": "Software Engineer",
+      "company": "Tech Innovations Inc.",
+      "department": "Development",
+      "workLocation": "Remote",
+      "dateOfJoining": "2015-08-01"
+    }
+  },
+  {
+    "userId": "df6b1632-881a-4086-a66b-82777469f8f4",
+    "active": true,
+    "basicInformation": {
+      "fullName": "Serafin Demés",
+      "username": "serafindemes",
+      "profilePicture": "https://xsgames.co/randomusers/assets/avatars/male/21.jpg",
+      "emailAddress": "serafindemes@gmail.com",
+      "phoneNumber": "+1 555-123-4567",
+      "dateOfBirth": "1985-06-15",
+      "gender": "Male"
+    },
+    "contactInformation": {
+      "address": {
+        "street": "456 Main Street",
+        "city": "Springfield",
+        "state": "Illinois",
+        "zipCode": "62704",
+        "country": "USA",
+        "fullAddress": "456 Main Street, Springfield, Illinois, 62704, USA"
+      },
+      "socialMediaLinks": {
+        "linkedIn": "https://linkedin.com/in/serafindemes",
+        "twitter": "https://twitter.com/serafindemes",
+        "instagram": "https://instagram.com/serafindemes"
+      },
+      "alternatePhoneNumber": "+1 555-987-6543",
+      "alternateEmailAddress": "serafindemes.alt@example.com"
+    },
+    "professionalInformation": {
+      "jobTitle": "Software Engineer",
+      "company": "Tech Innovations Inc.",
+      "department": "Development",
+      "workLocation": "Remote",
+      "dateOfJoining": "2015-08-01"
+    }
+  },
+  {
+    "userId": "84df87a5-7398-4649-a154-946119c94ac1",
+    "active": true,
+    "basicInformation": {
+      "fullName": "Elba Surero",
+      "username": "elbasurero",
+      "profilePicture": "https://xsgames.co/randomusers/assets/avatars/female/14.jpg",
+      "emailAddress": "elbasurero@yahoo.com",
+      "phoneNumber": "+1 555-123-4567",
+      "dateOfBirth": "1985-06-15",
+      "gender": "Female"
+    },
+    "contactInformation": {
+      "address": {
+        "street": "456 Main Street",
+        "city": "Springfield",
+        "state": "Illinois",
+        "zipCode": "62704",
+        "country": "USA",
+        "fullAddress": "456 Main Street, Springfield, Illinois, 62704, USA"
+      },
+      "socialMediaLinks": {
+        "linkedIn": "https://linkedin.com/in/elbasurero",
+        "twitter": "https://twitter.com/elbasurero",
+        "instagram": "https://instagram.com/elbasurero"
+      },
+      "alternatePhoneNumber": "+1 555-987-6543",
+      "alternateEmailAddress": "elbasurero.alt@example.com"
+    },
+    "professionalInformation": {
+      "jobTitle": "Software Engineer",
+      "company": "Tech Innovations Inc.",
+      "department": "Development",
+      "workLocation": "Remote",
+      "dateOfJoining": "2015-08-01"
+    }
+  },
+  {
+    "userId": "a2f0d7b5-907d-4f87-b990-9fd243bdc635",
+    "active": true,
+    "basicInformation": {
+      "fullName": "Jacky Sieras",
+      "username": "jackysieras",
+      "profilePicture": "https://xsgames.co/randomusers/assets/avatars/female/22.jpg",
+      "emailAddress": "jackysieras@hotmail.com",
+      "phoneNumber": "+1 555-123-4567",
+      "dateOfBirth": "1985-06-15",
+      "gender": "Female"
+    },
+    "contactInformation": {
+      "address": {
+        "street": "456 Main Street",
+        "city": "Springfield",
+        "state": "Illinois",
+        "zipCode": "62704",
+        "country": "USA",
+        "fullAddress": "456 Main Street, Springfield, Illinois, 62704, USA"
+      },
+      "socialMediaLinks": {
+        "linkedIn": "https://linkedin.com/in/jackysieras",
+        "twitter": "https://twitter.com/jackysieras",
+        "instagram": "https://instagram.com/jackysieras"
+      },
+      "alternatePhoneNumber": "+1 555-987-6543",
+      "alternateEmailAddress": "jackysieras.alt@example.com"
+    },
+    "professionalInformation": {
+      "jobTitle": "Software Engineer",
+      "company": "Tech Innovations Inc.",
+      "department": "Development",
+      "workLocation": "Remote",
+      "dateOfJoining": "2015-08-01"
+    }
+  },
+  {
+    "userId": "bba23781-75e4-4432-b154-f0067a1d9b89",
+    "active": false,
+    "basicInformation": {
+      "fullName": "Lola Mento",
+      "username": "lolamento",
+      "profilePicture": "https://xsgames.co/randomusers/assets/avatars/female/41.jpg",
+      "emailAddress": "lolamento@hotmail.com",
+      "phoneNumber": "+1 555-123-4567",
+      "dateOfBirth": "1985-06-15",
+      "gender": "Female"
+    },
+    "contactInformation": {
+      "address": {
+        "street": "456 Main Street",
+        "city": "Springfield",
+        "state": "Illinois",
+        "zipCode": "62704",
+        "country": "USA",
+        "fullAddress": "456 Main Street, Springfield, Illinois, 62704, USA"
+      },
+      "socialMediaLinks": {
+        "linkedIn": "https://linkedin.com/in/lolamento",
+        "twitter": "https://twitter.com/lolamento",
+        "instagram": "https://instagram.com/lolamento"
+      },
+      "alternatePhoneNumber": "+1 555-987-6543",
+      "alternateEmailAddress": "lolamento.alt@example.com"
+    },
+    "professionalInformation": {
+      "jobTitle": "Software Engineer",
+      "company": "Tech Innovations Inc.",
+      "department": "Development",
+      "workLocation": "Remote",
+      "dateOfJoining": "2015-08-01"
+    }
+  },
+  {
+    "userId": "f4b57dd7-d8a5-477e-a0fd-e03ca0f49834",
+    "active": true,
+    "basicInformation": {
+      "fullName": "Esther Colero",
+      "username": "esthercolero",
+      "profilePicture": "https://xsgames.co/randomusers/assets/avatars/female/12.jpg",
+      "emailAddress": "esthercolero@gmail.com",
+      "phoneNumber": "+1 555-123-4567",
+      "dateOfBirth": "1985-06-15",
+      "gender": "Female"
+    },
+    "contactInformation": {
+      "address": {
+        "street": "456 Main Street",
+        "city": "Springfield",
+        "state": "Illinois",
+        "zipCode": "62704",
+        "country": "USA",
+        "fullAddress": "456 Main Street, Springfield, Illinois, 62704, USA"
+      },
+      "socialMediaLinks": {
+        "linkedIn": "https://linkedin.com/in/esthercolero",
+        "twitter": "https://twitter.com/esthercolero",
+        "instagram": "https://instagram.com/esthercolero"
+      },
+      "alternatePhoneNumber": "+1 555-987-6543",
+      "alternateEmailAddress": "esthercolero.alt@example.com"
+    },
+    "professionalInformation": {
+      "jobTitle": "Software Engineer",
+      "company": "Tech Innovations Inc.",
+      "department": "Development",
+      "workLocation": "Remote",
+      "dateOfJoining": "2015-08-01"
+    }
+  },
+  {
+    "userId": "5580dcdb-d727-487d-aa41-76d631d8f492",
+    "active": false,
+    "basicInformation": {
+      "fullName": "Aiko Mida",
+      "username": "aikomida",
+      "profilePicture": "https://xsgames.co/randomusers/assets/avatars/male/10.jpg",
+      "emailAddress": "aikomida@yahoo.com",
+      "phoneNumber": "+1 555-123-4567",
+      "dateOfBirth": "1985-06-15",
+      "gender": "Male"
+    },
+    "contactInformation": {
+      "address": {
+        "street": "456 Main Street",
+        "city": "Springfield",
+        "state": "Illinois",
+        "zipCode": "62704",
+        "country": "USA",
+        "fullAddress": "456 Main Street, Springfield, Illinois, 62704, USA"
+      },
+      "socialMediaLinks": {
+        "linkedIn": "https://linkedin.com/in/aikomida",
+        "twitter": "https://twitter.com/aikomida",
+        "instagram": "https://instagram.com/aikomida"
+      },
+      "alternatePhoneNumber": "+1 555-987-6543",
+      "alternateEmailAddress": "aikomida.alt@example.com"
+    },
+    "professionalInformation": {
+      "jobTitle": "Software Engineer",
+      "company": "Tech Innovations Inc.",
+      "department": "Development",
+      "workLocation": "Remote",
+      "dateOfJoining": "2015-08-01"
+    }
+  },
+  {
+    "userId": "5580dcdb-d727-487d-aa41-76d631d8f493",
+    "active": false,
+    "basicInformation": {
+      "fullName": "Yoko Mosushi",
+      "username": "yokomosushi",
+      "profilePicture": "https://xsgames.co/randomusers/assets/avatars/female/19.jpg",
+      "emailAddress": "yokomosushi@yahoo.com",
+      "phoneNumber": "+1 555-123-4567",
+      "dateOfBirth": "1985-06-15",
+      "gender": "Female"
+    },
+    "contactInformation": {
+      "address": {
+        "street": "456 Main Street",
+        "city": "Springfield",
+        "state": "Illinois",
+        "zipCode": "62704",
+        "country": "USA",
+        "fullAddress": "456 Main Street, Springfield, Illinois, 62704, USA"
+      },
+      "socialMediaLinks": {
+        "linkedIn": "https://linkedin.com/in/yokomosushi",
+        "twitter": "https://twitter.com/yokomosushi",
+        "instagram": "https://instagram.com/yokomosushi"
+      },
+      "alternatePhoneNumber": "+1 555-987-6543",
+      "alternateEmailAddress": "yokomosushi.alt@example.com"
+    },
+    "professionalInformation": {
+      "jobTitle": "Software Engineer",
+      "company": "Tech Innovations Inc.",
+      "department": "Development",
+      "workLocation": "Remote",
+      "dateOfJoining": "2015-08-01"
+    }
+  }
+]

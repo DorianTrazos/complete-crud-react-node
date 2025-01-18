@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { COLORS } from './colors';
 import './normalize.css';
 export const GlobalStyles = createGlobalStyle`
     *,
@@ -12,7 +13,7 @@ export const GlobalStyles = createGlobalStyle`
         display: block;
     }
 
-    ul {
+    nav ul {
         list-style: none;
         padding-left: 0;
         margin-top: 0;
@@ -27,6 +28,10 @@ export const GlobalStyles = createGlobalStyle`
     body{
         font-family: sans-serif;
         margin: 0;
+        background-color: ${COLORS.grey};
     }
 
+    h2{
+        margin-bottom: 0;
+    }
 `;

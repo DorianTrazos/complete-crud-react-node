@@ -14,27 +14,27 @@ usersController.getAllUsers = (req, res) => {
 
 usersController.getUserById = (req, res) => {
   const { id } = req.params;
-  // const id = req.params.id
-
-  fs.readFile(usersFile, (error, data) => {
-    if (error) return res.status(500).json({ error: 'Error reading user file' });
+  fs.readFile(usersFile, (err, data) => {
+    if (err) return res.status(500).json({ error: 'Error reading user file ' });
     const userFound = JSON.parse(data).find(user => user.userId === id);
-    if (!userFound) return res.status(404).json({ error: 'User not found' });
-    return res.json(userFound);
+    if (userFound) {
+      return res.status(200).json(userFound);
+    } else {
+      return res.status(404).json({ error: 'User not found' });
+    }
   });
 };
 
-usersController.createUser = (req, res) => {
-  const newData = { userId: v4(), ...req.body };
-
-  fs.readFile(usersFile, (error, data) => {
-    if (error) return res.status(500).json({ error: 'Error reading user file' });
-    const jsonData = JSON.parse(data);
-    const updatedUsers = [...jsonData, newData];
-    fs.writeFile(usersFile, JSON.stringify(updatedUsers), error => {
-      if (error) return res.status(500).json({ error: 'Error writing user file' });
-      return res.status(200).json(updatedUsers);
-    });
+usersController.deleteUserById = (req, res) => {
+  const { id } = req.params;
+  fs.readFile(usersFile, (err, data) => {
+    if (err) return res.status(500).json({ error: 'Error reading user file ' });
+    if (id) {
+      const usersUpdated = JSON.parse(data).filter(user => user.userId !== id);
+      return res.status(200).json(usersUpdated);
+    } else {
+      return res.status(400).json({ error: 'Bad Request: No ID' });
+    }
   });
 };
 

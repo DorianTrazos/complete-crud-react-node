@@ -1,41 +1,66 @@
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import Button from '../../components/button/Button';
+import { getDataById } from '../../utils/api';
 
 const User = () => {
 	const [user, setUser] = useState();
 	const { id } = useParams();
 
 	useEffect(() => {
-		getUserById(id, setUser);
+		getUserInfo(id, setUser);
 	}, [id]);
+
+	if (!user) {
+		return <h2>No User</h2>;
+	}
+
+	const {
+		profilePicture,
+		fullName,
+		emailAddress,
+		username,
+		dateOfBirth,
+		gender,
+		phoneNumber
+	} = user.basicInformation;
 
 	return (
 		<>
-			<h1>User</h1>
-			{!user && <h2>Loading...</h2>}
-			{user && (
-				<>
-					<h2>{user.name}</h2>
-					<h2>{user.email}</h2>
-					<input type='text' defaultValue={user.name} />
-				</>
-			)}
-
-			<Link to='/'>
-				<button>Back to users</button>
-			</Link>
+			<img src={profilePicture} alt='' />
+			<h2>{fullName}</h2>
+			<span>{emailAddress}</span>
+			<div>
+				<h3>User Profile</h3>
+				<div>
+					<span>Gender</span>
+					<span>{gender}</span>
+				</div>
+				<div>
+					<span>Date of Birth</span>
+					<span>{dateOfBirth}</span>
+				</div>
+				<div>
+					<span>Phone Number</span>
+					<span>{phoneNumber}</span>
+				</div>
+				<div>
+					<span>Username</span>
+					<span>{username}</span>
+				</div>
+				<div>
+					<Button type='accent'>EDIT</Button>
+					<Button type='delete'>DELETE</Button>
+				</div>
+			</div>
 		</>
 	);
 };
 
-const getUserById = async (id, setUser) => {
-	try {
-		const response = await fetch(`http://localhost:3000/api/users/${id}`);
-		const user = await response.json();
-		setUser(user);
-	} catch (error) {
-		console.log(error.error);
-	}
+const getUserInfo = async (id, setUser) => {
+	const user = await getDataById(id);
+	console.log(user);
+	setUser(user);
 };
 
 export default User;

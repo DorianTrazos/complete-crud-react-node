@@ -4,6 +4,6 @@ const userRoutes = express.Router();
 
 userRoutes.get('/', usersController.getAllUsers);
 userRoutes.get('/:id', usersController.getUserById);
-userRoutes.post('/', usersController.createUser);
+userRoutes.delete('/:id', usersController.deleteUserById);
 
 module.exports = userRoutes;
