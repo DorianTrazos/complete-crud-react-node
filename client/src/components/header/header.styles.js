@@ -5,6 +5,7 @@ const StyledHeader = styled.header`
 	background-color: ${COLORS.primary};
 	color: aliceblue;
 	padding: 0.5rem 1.25rem;
+	margin-bottom: 1rem;
 `;
 
 export { StyledHeader };

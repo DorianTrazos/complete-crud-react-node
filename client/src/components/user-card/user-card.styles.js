@@ -13,11 +13,6 @@ const StyledUserCard = styled.div`
 	box-shadow: 2px 2px 4px rgb(0 0 0 / 0.25);
 `;
 
-const StyledUserImage = styled.img`
-	width: 4rem;
-	border-radius: 50%;
-`;
-
 const StyledUserInfo = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -30,4 +25,4 @@ const StyledFooterCard = styled.div`
 	justify-content: space-between;
 `;
 
-export { StyledFooterCard, StyledUserCard, StyledUserImage, StyledUserInfo };
+export { StyledFooterCard, StyledUserCard, StyledUserInfo };

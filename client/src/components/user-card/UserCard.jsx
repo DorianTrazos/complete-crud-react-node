@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import ActiveUser from '../active-user/ActiveUser';
 import Button from '../button/Button';
+import UserImage from '../user-image/UserImage';
 import {
 	StyledFooterCard,
 	StyledUserCard,
-	StyledUserImage,
 	StyledUserInfo
 } from './user-card.styles';
 
@@ -18,10 +18,7 @@ const UserCard = ({
 }) => {
 	return (
 		<StyledUserCard>
-			<StyledUserImage
-				src={profilePicture}
-				alt={`${username} profile picture`}
-			/>
+			<UserImage profilePicture={profilePicture} username={username} />
 			<StyledUserInfo>
 				<h2>{fullName}</h2>
 				<span>{emailAddress}</span>

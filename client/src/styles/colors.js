@@ -5,5 +5,6 @@ export const COLORS = {
 	accent: '#3FA7D6',
 	success: '#4CAF50',
 	warning: '#FFC107',
-	error: '#F44336'
+	error: '#F44336',
+	lightText: '#505050'
 };
