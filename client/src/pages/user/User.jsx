@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import ActiveUser from '../../components/active-user/ActiveUser';
 import Button from '../../components/button/Button';
 import UserImage from '../../components/user-image/UserImage';
 import { deleteData, getDataById, updateDataById } from '../../utils/api';
@@ -28,6 +29,7 @@ const User = () => {
 	}
 
 	const {
+		active,
 		profilePicture,
 		fullName,
 		email,
@@ -41,15 +43,19 @@ const User = () => {
 		<>
 			<StyledUser>
 				<Link to='/' style={{ marginBottom: '1rem' }}>
-					<Button type='accent'>Back to Users</Button>
+					<Button style='accent' type='button'>
+						Back to Users
+					</Button>
 				</Link>
 				<UserImage profilePicture={profilePicture} username={username} />
 				{isEditing && (
 					<form
-						onSubmit={event =>
-							updateUser(id, event.target, setUser, setIsEditing)
-						}
+						onSubmit={event => updateUser(id, event, setUser, setIsEditing)}
 					>
+						<StyledInfoField>
+							<label htmlFor='active'>Active</label>
+							<input type='checkbox' name='active' defaultChecked={active} />
+						</StyledInfoField>
 						<StyledInfoField>
 							<label htmlFor='name'>Name</label>
 							<input type='text' name='name' defaultValue={fullName} />
@@ -58,9 +64,21 @@ const User = () => {
 							<label htmlFor='email'>Email</label>
 							<input type='text' name='email' defaultValue={email} />
 						</StyledInfoField>
+						<StyledInfoField>
+							<label htmlFor='birth'>Date of Birth</label>
+							<input type='date' name='birth' defaultValue={dateOfBirth} />
+						</StyledInfoField>
+						<StyledInfoField>
+							<label htmlFor='phone'>Phone</label>
+							<input type='phone' name='phone' defaultValue={phoneNumber} />
+						</StyledInfoField>
 						<StyledButtons>
-							<Button type='accent'>SAVE USER</Button>
-							<Button type='delete' action={() => setIsEditing(false)}>
+							<Button style='accent'>SAVE USER</Button>
+							<Button
+								style='delete'
+								type='button'
+								action={() => setIsEditing(false)}
+							>
 								CANCEL
 							</Button>
 						</StyledButtons>
@@ -73,7 +91,8 @@ const User = () => {
 							<StyledLightText>{email}</StyledLightText>
 							<StyledLightText>@{username}</StyledLightText>
 						</StyledCardHeader>
-						<StyledLightText>User Profile</StyledLightText>
+
+						<ActiveUser active={active} />
 						<StyledInfoField>
 							<StyledLightText>Gender:</StyledLightText>
 							<StyledBoldText>{gender}</StyledBoldText>
@@ -87,12 +106,12 @@ const User = () => {
 							<StyledBoldText>{phoneNumber}</StyledBoldText>
 						</StyledInfoField>
 						<StyledButtons>
-							<Button type='accent' action={() => setIsEditing(true)}>
+							<Button style='accent' action={() => setIsEditing(true)}>
 								EDIT
 							</Button>
 
 							<Button
-								type='delete'
+								style='delete'
 								action={() => deleteUser(user.userId, navigate)}
 							>
 								DELETE
@@ -107,14 +126,18 @@ const User = () => {
 
 const getUserInfo = async (id, setUser) => {
 	const user = await getDataById(id);
-	console.log(user);
 	setUser(user);
 };
 
-const updateUser = async (id, formInfo, setUser, setIsEditing) => {
+const updateUser = async (id, event, setUser, setIsEditing) => {
+	event.preventDefault();
+	const formInfo = event.target;
 	const body = {
 		fullName: formInfo.name.value,
-		email: formInfo.email.value
+		email: formInfo.email.value,
+		dateOfBirth: formInfo.birth.value,
+		phoneNumber: formInfo.phone.value,
+		active: formInfo.active.checked
 	};
 	const userUpdated = await updateDataById(id, body);
 	setUser(userUpdated);

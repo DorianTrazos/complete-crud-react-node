@@ -4,18 +4,27 @@ const URL_API = '/api/users/';
 export const getAllData = async () => {
 	try {
 		const response = await fetch(URL_BASE + URL_API);
-		const data = await response.json();
-		return data;
+		if (response.ok) {
+			const data = await response.json();
+			return data;
+		} else {
+			return [];
+		}
 	} catch (error) {
 		console.log(error);
+		throw new Error(error);
 	}
 };
 
 export const getDataById = async id => {
 	try {
 		const response = await fetch(URL_BASE + URL_API + id);
-		const data = await response.json();
-		return data;
+		if (response.ok) {
+			const data = await response.json();
+			return data;
+		} else {
+			return [];
+		}
 	} catch (error) {
 		console.log(error);
 	}

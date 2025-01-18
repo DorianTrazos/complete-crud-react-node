@@ -8,7 +8,8 @@ const StyledButton = styled.button`
 	border-radius: 0.6rem;
 	text-transform: uppercase;
 	font-weight: 600;
-	color: ${({ $type }) => ($type === 'accent' ? COLORS.accent : COLORS.error)};
+	color: ${({ $style }) =>
+		$style === 'accent' ? COLORS.accent : COLORS.error};
 	width: fit-content;
 `;
 

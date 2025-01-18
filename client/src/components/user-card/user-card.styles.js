@@ -16,13 +16,17 @@ const StyledUserCard = styled.div`
 const StyledUserInfo = styled.div`
 	display: flex;
 	flex-direction: column;
+	text-align: center;
 	gap: 1rem;
 	margin-bottom: 1rem;
 `;
 
 const StyledFooterCard = styled.div`
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	margin-inline: auto;
 `;
 
 export { StyledFooterCard, StyledUserCard, StyledUserInfo };

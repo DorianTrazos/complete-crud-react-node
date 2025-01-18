@@ -13,7 +13,7 @@ const UserCard = ({
 	active,
 	profilePicture,
 	fullName,
-	emailAddress,
+	email,
 	username
 }) => {
 	return (
@@ -21,13 +21,13 @@ const UserCard = ({
 			<UserImage profilePicture={profilePicture} username={username} />
 			<StyledUserInfo>
 				<h2>{fullName}</h2>
-				<span>{emailAddress}</span>
+				<span>{email}</span>
 				<span>@{username}</span>
 			</StyledUserInfo>
 			<StyledFooterCard>
 				<ActiveUser active={active} />
 				<Link to={`/user/${userId}`}>
-					<Button type='accent'>Details</Button>
+					<Button style='accent'>Details</Button>
 				</Link>
 			</StyledFooterCard>
 		</StyledUserCard>
