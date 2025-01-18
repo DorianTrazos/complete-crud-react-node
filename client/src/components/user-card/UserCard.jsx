@@ -8,8 +8,14 @@ import {
 	StyledUserInfo
 } from './user-card.styles';
 
-const UserCard = ({ userId, active, basicInformation }) => {
-	const { profilePicture, fullName, emailAddress, username } = basicInformation;
+const UserCard = ({
+	userId,
+	active,
+	profilePicture,
+	fullName,
+	emailAddress,
+	username
+}) => {
 	return (
 		<StyledUserCard>
 			<StyledUserImage

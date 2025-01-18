@@ -20,27 +20,33 @@ const User = () => {
 	const {
 		profilePicture,
 		fullName,
-		emailAddress,
+		email,
 		username,
 		dateOfBirth,
 		gender,
 		phoneNumber
-	} = user.basicInformation;
+	} = user;
 
 	return (
 		<>
 			<img src={profilePicture} alt='' />
 			{!isEditing && <h2>{fullName}</h2>}
-			{!isEditing && <span>{emailAddress}</span>}
+			{!isEditing && <span>{email}</span>}
 
 			{isEditing && (
 				<form
 					onSubmit={event =>
-						updateUser(id, event.target, setUser, setIsEditing)
+						updateUser(
+							id,
+							event.target,
+							setUser,
+							setIsEditing,
+							user.basicInformation
+						)
 					}
 				>
 					<input type='text' name='name' defaultValue={fullName} />
-					<input type='text' name='email' defaultValue={emailAddress} />
+					<input type='text' name='email' defaultValue={email} />
 
 					<Button type='accent'>SAVE USER</Button>
 				</form>
@@ -86,10 +92,8 @@ const getUserInfo = async (id, setUser) => {
 
 const updateUser = async (id, formInfo, setUser, setIsEditing) => {
 	const body = {
-		basicInformation: {
-			fullName: formInfo.name.value,
-			email: formInfo.email.value
-		}
+		fullName: formInfo.name.value,
+		email: formInfo.email.value
 	};
 	const userUpdated = await updateDataById(id, body);
 	setUser(userUpdated);
