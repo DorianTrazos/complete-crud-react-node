@@ -31,7 +31,11 @@ usersController.deleteUserById = (req, res) => {
     if (err) return res.status(500).json({ error: 'Error reading user file ' });
     if (id) {
       const usersUpdated = JSON.parse(data).filter(user => user.userId !== id);
-      return res.status(200).json(usersUpdated);
+
+      fs.writeFile(usersFile, JSON.stringify(usersUpdated), error => {
+        if (error) return res.status(500).json({ error: 'Error writing user file' });
+        return res.status(200).json({ message: 'User deleted' });
+      });
     } else {
       return res.status(400).json({ error: 'Bad Request: No ID' });
     }
