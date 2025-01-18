@@ -25,6 +25,33 @@ usersController.getUserById = (req, res) => {
   });
 };
 
+usersController.updateUser = (req, res) => {
+  const { id } = req.params;
+  const userInfo = req.body;
+
+  fs.readFile(usersFile, (err, data) => {
+    if (err) return res.status(500).json({ error: 'Error reading user file ' });
+
+    if (!id || !userInfo) {
+      return res.status(400).json({ error: 'Bad Request: No ID or INFO' });
+    }
+
+    const jsonUsers = JSON.parse(data);
+    const userToEditIndex = jsonUsers.findIndex(user => user.userId === id);
+
+    if (userToEditIndex === -1) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    jsonUsers[userToEditIndex] = { ...jsonUsers[userToEditIndex], ...userInfo };
+
+    fs.writeFile(usersFile, JSON.stringify(jsonUsers), error => {
+      if (error) return res.status(500).json({ error: 'Error writing user file' });
+      return res.status(200).json(jsonUsers[userToEditIndex]);
+    });
+  });
+};
+
 usersController.deleteUserById = (req, res) => {
   const { id } = req.params;
   fs.readFile(usersFile, (err, data) => {
