@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import ActiveUser from '../../components/active-user/ActiveUser';
 import Button from '../../components/button/Button';
 import UserImage from '../../components/user-image/UserImage';
-import { deleteData, getDataById, updateDataById } from '../../utils/api';
+import { deleteDataById, getDataById, updateDataById } from '../../utils/api';
 import {
 	StyledBoldText,
 	StyledButtons,
@@ -145,7 +145,7 @@ const updateUser = async (id, event, setUser, setIsEditing) => {
 };
 
 const deleteUser = async (id, navigate) => {
-	await deleteData(id);
+	await deleteDataById(id);
 	navigate('/');
 };
 
