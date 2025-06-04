@@ -1,4 +1,4 @@
-const URL_BASE = 'http://localhost:3000';
+const URL_BASE = 'https://complete-crud-react-node-back.onrender.com';
 const URL_API = '/api/users/';
 
 export const getAllData = async () => {
